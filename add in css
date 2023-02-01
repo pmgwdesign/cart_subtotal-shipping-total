@@ -1,0 +1,21 @@
+.shippingAndTotal {
+  display: block;
+  margin-bottom: 10px;
+}
+
+.ShippingAndTotal__Line {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    font-size: 13px;
+    line-height: 14px;
+}
+
+.ShippingAndTotal__Line:not(:last-child) {
+    margin-bottom: 8px;
+}
+
+.ShippingAndTotal__Line .HighlightText {
+    color: #439775;
+    font-weight: 600;
+}
