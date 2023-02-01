@@ -1,0 +1,6 @@
+<div class=shippingAndTotal>
+    {%- assign shipping_price = 3.95 | times: 100 -%}
+        <div class="ShippingAndTotal__Line">Zwischensumme: <span style="font-size:15px">{{ cart.total_price| money }}</span></div>
+        <div class="ShippingAndTotal__Line">Versandkosten: <span class="HighlightText">{% if cart.total_price < threshold_in_cents %}3,95 €{% else %}Kostenlos{% endif %}</span></div>
+        <div class="ShippingAndTotal__Line">Gesamtkosten: <span class="HighlightText">{% if cart.total_price < threshold_in_cents %}{{ cart.total_price | plus: shipping_price| money}}{% else %}{{ cart.total_price| money }}{% endif %}</span></div>
+      </div>
